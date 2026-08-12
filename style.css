@@ -2812,3 +2812,74 @@ textarea {
     width: 100%;
   }
 }
+
+/* === PRINT STYLES UNTUK PDF EXPORT === */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #1a1a1a !important;
+  }
+  
+  /* Sembunyikan elemen interaktif & UI navigasi */
+  .navbar,
+  .hamburger,
+  #kontak,
+  .footer,
+  .btn,
+  .btn-outline,
+  .scroll-progress-container,
+  .float-chip,
+  .cert-click-hint,
+  #cert-modal {
+    display: none !important;
+  }
+
+  /* Matikan animasi agar konten tidak tersembunyi */
+  .reveal, .reveal.active {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    visibility: visible !important;
+  }
+  
+  .section {
+    padding: 30px 0 !important;
+    page-break-inside: avoid;
+  }
+
+  /* Rapikan grid agar tidak bertumpuk */
+  .hero-container {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+  }
+  
+  .cert-grid, .proyek-grid, .award-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 15px !important;
+  }
+  
+  /* Hindari elemen terpotong antar halaman */
+  .proyek-card,
+  .cert-card,
+  .award-card,
+  .pub-card,
+  .timeline-item,
+  .edukasi-item-row {
+    page-break-inside: avoid !important;
+    margin-bottom: 15px !important;
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+    transform: none !important;
+  }
+  
+  .proyek-img-wrapper {
+    height: 150px !important;
+  }
+  
+  h1, h2, h3 {
+    color: #000 !important;
+    page-break-after: avoid !important;
+  }
+}
