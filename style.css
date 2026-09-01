@@ -792,7 +792,6 @@ textarea {
 }
 
 .sec-desc {
-  margin-top: -40px;
   margin-bottom: 48px;
   color: var(--text-muted);
   font-size: 0.95rem;
@@ -2653,6 +2652,10 @@ textarea {
 }
 
 @media (max-width: 768px) {
+  .float-chip {
+    display: none;
+  }
+
   .hamburger {
     display: flex;
   }
@@ -3129,7 +3132,7 @@ textarea {
 .proj-navy-mock .mb-screen {
   overflow: hidden;
   width: 100%;
-  height: 220px;
+  height: auto;
   background: #070D18;
   position: relative;
   display: block;
@@ -3137,8 +3140,8 @@ textarea {
 
 .proj-navy-img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   object-position: top center;
   display: block;
   transition: transform 0.35s ease;
@@ -3277,7 +3280,7 @@ textarea {
   }
   
   .proj-navy-mock .mb-screen {
-    height: 190px;
+    height: auto;
   }
   
   .proj-navy-body {
