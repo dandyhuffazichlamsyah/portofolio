@@ -2615,7 +2615,14 @@ textarea {
   }
 
   .hero-right {
-    display: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .hero-card {
+    max-width: 360px;
+    margin: 0 auto;
   }
 
   .hero-stats-row {
@@ -2762,6 +2769,14 @@ textarea {
 }
 
 @media (max-width: 480px) {
+  .nav-logo {
+    font-size: 0.88rem;
+    gap: 8px;
+  }
+  .logo-avatar-wrap {
+    width: 30px;
+    height: 30px;
+  }
   .hero-name {
     font-size: 2.4rem;
   }
@@ -3141,6 +3156,7 @@ textarea {
 .proj-navy-img {
   width: 100%;
   height: auto;
+  max-width: 100%;
   object-fit: contain;
   object-position: top center;
   display: block;
@@ -3148,7 +3164,13 @@ textarea {
 }
 
 .proj-navy-card:hover .proj-navy-img {
-  transform: scale(1.02);
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: top center;
+  display: block;
+  transition: transform 0.35s ease;
 }
 
 /* Card Body - Tight, Clean, No Weird Spacing */
@@ -3280,8 +3302,13 @@ textarea {
   }
   
   .proj-navy-mock .mb-screen {
-    height: auto;
-  }
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  background: #070D18;
+  position: relative;
+  display: block;
+}
   
   .proj-navy-body {
     padding: 16px;
